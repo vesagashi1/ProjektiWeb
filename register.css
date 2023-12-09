@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Nanum+Myeongjo:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255); 
+   
+   /* overflow: hidden;*/
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: inherit;
+    /*overflow: inherit;*/
+    overflow-x: inherit;
+    overflow: inherit;
+    }
+
+    
+body {
+    background-image: url('https://media.istockphoto.com/id/1162544557/photo/blurred-background-and-texture-yellow-background-abstract.webp?b=1&s=170667a&w=0&k=20&c=jB_9pCXLAxryduZWSEm3hFZcFT90ak-NOWBY4I3WI0A=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    
+}
+
+   
+
+
+   
+
+header{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+} 
+
+.headeri{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emri{
+    font-family: 'Arsenal', sans-serif;
+    color: white;
+
+}
+
+.linqet{
+  
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Arsenal', sans-serif;
+    font-family: 'Cormorant', serif;
+}
+
+.linqet:hover{
+ font-family: 'Arsenal', sans-serif;
+font-family: 'Cormorant', serif;
+text-decoration: none;
+color: lightgray;
+font-weight: 600;
+font-size: 17px;
+text-decoration: underline;
+transition: 0.3s ease-in-out;
+}
+
+form {
+            width: 440px;
+            max-height: 100vh;
+            overflow-y: auto; 
+            margin: 10px ; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: white;
+            z-index: 1;
+           
+           
+        }
+
+        .forms{
+            display: flex;
+          justify-content: center;
+        align-items: center;
+        }
+
+       
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    text-align: left;
+    font-family: 'Merriweather', serif;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px auto;
+    box-sizing: border-box;
+   
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+}
+
+.login-form {
+    display: none;
+}
+
+h2{
+    text-align: center;
+}
+
+.lgS{
+    text-decoration: none;
+}
+
+.lgS:hover{
+    color: black;
+    font-weight: 600;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.errorr-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.errorMsg{
+    
+        color: red;
+        margin-top: 5px;
+    }
+
+
+
+   
