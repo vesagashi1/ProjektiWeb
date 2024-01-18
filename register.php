@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sage & Salt</title>
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="index.php">
 </head>
 <body>
     <header>
         <div class="headeri">
             <h1 class="emri">Sage & Salt</h1>
     <div class="linkk">
-            <a class="linqet" href="index.html">Home</a>
-            <a class="linqet" href="aboutUs.html">About Us</a>
-            <a class="linqet" href="menu.html">Menu</a>
+            <a class="linqet" href="index.php">Home</a>
+            <a class="linqet" href="aboutUs.php">About Us</a>
+            <a class="linqet" href="menu.php">Menu</a>
             <a class="linqet" href="">Contact Us</a>
-            <a class="linqet" href="register.html">Register</a>
+            <a class="linqet" href="register.php">Register</a>
         </div>
         </div>
     </header>
  
     <div class="forms">
-    <form id="signup-form">
+    <form id="signup-form" action="process_signup.php" method="post" >
         <h2>Sign Up</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -39,7 +40,7 @@
         <input type="password" id="confirm-password" name="confirm-password" required> 
         <span id="password-error" class="error-message"></span> <br>
 
-        <button type="button" onclick="validateSignUp()">Sign Up</button>
+        <buttons type="submit" >Sign Up</button>
         <p>Already have an account? <a class="lgS" href="#" onclick="showLoginForm()">Log In</a></p>
     </form>
 </div>

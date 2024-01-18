@@ -12,11 +12,11 @@
     <div class="headeri">
         <h1 class="emri">Sage & Salt</h1>
 <div class="linkk">
-        <a class="linqet" href="index.html">Home</a>
+        <a class="linqet" href="index.php">Home</a>
         <a class="linqet scroll-link" href="#abUs">About Us</a>
-        <a class="linqet" href="menu.html">Menu</a>
+        <a class="linqet" href="menu.php">Menu</a>
         <a class="linqet scroll-link" href="#contact-section">Contact Us</a>
-        <a class="linqet" href="register.html">Register</a>
+        <a class="linqet" href="register.php">Register</a>
     </div>
     </div>
 </header>
@@ -66,10 +66,10 @@
         </div>
 
             <div class="grid-container2">
-                <div class="p2"><img class="ikon" src="fotot/coffee.png" alt=""><h2 class="food">Breakfast</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt </p> <a class="menu" href="menu.html">Go to the Menu</a></div>
-                <div class="p2"> <img class="ikon" src="fotot/bread.png" alt=""><h2 class="food">Brunch</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.html">Go to the Menu</a></div>
-                <div class="p2"><img class="ikon" src="fotot/lunch.png" alt=""><h2 class="food">Lunch</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.html">Go to the Menu</a></div>
-                <div class="p2"><img class="ikon" src="fotot/dinner.png" alt=""><h2 class="food">Dinner</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.html">Go to the Menu</a></div>
+                <div class="p2"><img class="ikon" src="fotot/coffee.png" alt=""><h2 class="food">Breakfast</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt </p> <a class="menu" href="menu.php">Go to the Menu</a></div>
+                <div class="p2"> <img class="ikon" src="fotot/bread.png" alt=""><h2 class="food">Brunch</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.php">Go to the Menu</a></div>
+                <div class="p2"><img class="ikon" src="fotot/lunch.png" alt=""><h2 class="food">Lunch</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.php">Go to the Menu</a></div>
+                <div class="p2"><img class="ikon" src="fotot/dinner.png" alt=""><h2 class="food">Dinner</h2><p class="tex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic dicta porro provident magni, enim amet molestias deleniti voluptatem. Neque qui doloremque sunt</p><a class="menu" href="menu.php">Go to the Menu</a></div>
             </div>
 
        

@@ -117,16 +117,18 @@ function validateSignUp() {
     var confirm = document.getElementById('confirm-password').value;
     var error = document.getElementById('password-error');
 
-    if(pass.length<8){
-        error.textContent="Password must be at least 8 characters long."
-    }else if(pass !=confirm){
-        error.textContent="Password do not match.";
-    }else{
-        error.textContent="";
-        alert('Sign-up successful!');
+    if (pass.length < 8) {
+        error.textContent = "Password must be at least 8 characters long.";
+        return false;
+    } else if (pass != confirm) {
+        error.textContent = "Passwords do not match.";
+        return false;
+    } else {
+        error.textContent = "";
+        return true; 
     }
-  
 }
+
 
 function validateLogin() {
 

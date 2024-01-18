@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sage & Salt</title>
     <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="index.php">
 </head>
 <body>
     <header>
         <div class="headeri">
             <h1 class="emri">Sage & Salt</h1>
     <div class="linkk">
-            <a class="linqet" href="index.html">Home</a>
-            <a class="linqet" href="aboutUs.html">About Us</a>
+            <a class="linqet" href="index.php">Home</a>
+            <a class="linqet" href="aboutUs.php">About Us</a>
             <a class="linqet" href="">Menu</a>
             <a class="linqet" href="">Contact Us</a>
-            <a class="linqet" href="register.html">Register</a>
+            <a class="linqet" href="register.php">Register</a>
         </div>
         </div>
     </header>
