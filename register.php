@@ -22,8 +22,7 @@
     </header>
  
     <div class="forms">
-    <form id="signup-form" action="process_signup.php" method="post" >
-        <h2>Sign Up</h2>
+    <form id="signup-form" method="post" action="process_registration.php"> 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -40,7 +39,7 @@
         <input type="password" id="confirm-password" name="confirm-password" required> 
         <span id="password-error" class="error-message"></span> <br>
 
-        <buttons type="submit" >Sign Up</button>
+        <button type="submit" >Sign Up</button>
         <p>Already have an account? <a class="lgS" href="#" onclick="showLoginForm()">Log In</a></p>
     </form>
 </div>
@@ -63,5 +62,6 @@
     
 
     <script src="app.js"></script>
+    
 </body>
 </html>
