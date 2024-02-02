@@ -48,57 +48,60 @@ document.querySelectorAll('.scroll-link').forEach(anchor => {
 
 
 
-function showCategory(category) {
-    const menuContainer = document.getElementById('food-menu');
-    menuContainer.innerHTML = ""; // Clear previous content
+
+
+
+// function showCategory(category) {
+//     const menuContainer = document.getElementById('food-menu');
+//     menuContainer.innerHTML = ""; // Clear previous content
 
     
-    const foodItems = {
-        breakfast: [
-            { name: 'Omelette', image: 'vo.jpg' },
-            { name: 'Pancakes', image: 'pancakes.jpg' },
-            { name: 'Fruit Parfait', image: 'frutat.jpg' },
-            { name: 'Bagel', image: 'bagel.jpg' },
-        ],
-        brunch: [
-            { name: 'Avocado Toast', image: 'avocado.jpg' },
-            { name: 'Fruit Salad', image: 'fruitSalad.jpg' },
-            { name: 'Eggs Benedict', image: 'egg.jpg' },
-        ],
-        lunch: [
-            { name: 'Caesar Salad', image: 'salata.jpg' },
-            { name: 'Club Sandwich', image: 'sandwich.jpg' },
-            { name: 'Caprese Panini', image: 'panini.jpg' },
-        ],
-        dinner: [
-            { name: 'Grilled Salmon', image: 'salmon.jpg' },
-            { name: 'Pasta Carbonara', image: 'carbonara.jpg' },
-            { name: 'Steak with Vegetables', image: 'steak.jpg' },
-            { name: 'Four Season Pizza', image: 'pizza.jpg' },
-            { name: 'Lasagna', image: 'lasagna.jpg' },
-        ],
-    };
+//     const foodItems = {
+//         breakfast: [
+//             { name: 'Omelette', image: 'vo.jpg' },
+//             { name: 'Pancakes', image: 'pancakes.jpg' },
+//             { name: 'Fruit Parfait', image: 'frutat.jpg' },
+//             { name: 'Bagel', image: 'bagel.jpg' },
+//         ],
+//         brunch: [
+//             { name: 'Avocado Toast', image: 'avocado.jpg' },
+//             { name: 'Fruit Salad', image: 'fruitSalad.jpg' },
+//             { name: 'Eggs Benedict', image: 'egg.jpg' },
+//         ],
+//         lunch: [
+//             { name: 'Caesar Salad', image: 'salata.jpg' },
+//             { name: 'Club Sandwich', image: 'sandwich.jpg' },
+//             { name: 'Caprese Panini', image: 'panini.jpg' },
+//         ],
+//         dinner: [
+//             { name: 'Grilled Salmon', image: 'salmon.jpg' },
+//             { name: 'Pasta Carbonara', image: 'carbonara.jpg' },
+//             { name: 'Steak with Vegetables', image: 'steak.jpg' },
+//             { name: 'Four Season Pizza', image: 'pizza.jpg' },
+//             { name: 'Lasagna', image: 'lasagna.jpg' },
+//         ],
+//     };
 
-    const selectedCategory = foodItems[category];
+//     const selectedCategory = foodItems[category];
 
-    if (selectedCategory) {
-        selectedCategory.forEach(item => {
-            const foodItem = document.createElement('div');
-            foodItem.className = 'food-item';
+//     if (selectedCategory) {
+//         selectedCategory.forEach(item => {
+//             const foodItem = document.createElement('div');
+//             foodItem.className = 'food-item';
 
-            const foodImage = document.createElement('img');
-            foodImage.src = `menuFotot/${item.image}`; 
-            foodImage.alt = item.name;
+//             const foodImage = document.createElement('img');
+//             foodImage.src = `menuFotot/${item.image}`; 
+//             foodImage.alt = item.name;
 
-            const foodName = document.createElement('p');
-            foodName.textContent = item.name;
+//             const foodName = document.createElement('p');
+//             foodName.textContent = item.name;
 
-            foodItem.appendChild(foodImage);
-            foodItem.appendChild(foodName);
-            menuContainer.appendChild(foodItem);
-        });
-    }
-}
+//             foodItem.appendChild(foodImage);
+//             foodItem.appendChild(foodName);
+//             menuContainer.appendChild(foodItem);
+//         });
+//     }
+// }
 
 
 

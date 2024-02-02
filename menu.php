@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+include_once 'dbmenu_config.php';
+include_once 'MenuItem.php';
+
+
+$databaseConnection = new DatabaseConnection();
+$conn = $databaseConnection->startConnection();
+
+try {
+    $stmt = $conn->prepare("SELECT * FROM menuitems");
+    $stmt->execute();
+    $menuItemsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    
+    $menuItems = array_map(function ($item) {
+        return new MenuItem($item['name'], $item['image_path'], $item['category']);
+    }, $menuItemsData);
+} catch (PDOException $e) {
+    echo "Error fetching menu items: " . $e->getMessage();
+    exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,18 +27,19 @@
     <title>Sage & Salt</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="index.php">
+    <script src="app.js"></script>
 </head>
 <body>
     <header>
         <div class="headeri">
             <h1 class="emri">Sage & Salt</h1>
-    <div class="linkk">
-            <a class="linqet" href="index.php">Home</a>
-            <a class="linqet" href="aboutUs.php">About Us</a>
-            <a class="linqet" href="">Menu</a>
-            <a class="linqet" href="">Contact Us</a>
-            <a class="linqet" href="register.php">Register</a>
-        </div>
+            <div class="linkk">
+                <a class="linqet" href="index.php">Home</a>
+                <a class="linqet scroll-link" href="aboutUs.php">About Us</a>
+                <a class="linqet" href="">Menu</a>
+                <a class="linqet scroll-link" href="index.php#contact-section">Contact Us</a>
+                <a class="linqet" href="register.php">Register</a>
+            </div>
         </div>
     </header>
 
@@ -29,81 +51,37 @@
     </nav>
 
     <div class="food-menu" id="food-menu">
-      
-        <div class="food-item">
-            <img src="menuFotot/vo.jpg" alt="Omelette">
-            <p>Omelette</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/pancakes.jpg" alt="Pancakes">
-            <p>Pancakes</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/frutat.jpg" alt="Fruit Parfait">
-            <p>Fruit Parfait</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/bagel.jpg" alt="Fruit Parfait">
-            <p>Bagel</p>
-           
-        </div>
-    
-      
-        <div class="food-item">
-            <img src="menuFotot/avocado.jpg" alt="Avocado Toast">
-            <p>Avocado Toast</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/fruitSalad.jpg" alt="Fruit Salad"> 
-            <p>Fruit Salad</p>
-        </div> 
-        <div class="food-item">
-            <img src="menuFotot/egg.jpg" alt="Eggs Benedict">
-            <p>Eggs Benedict</p>
-        </div>
-    
-     
-        <div class="food-item">
-            <img src="menuFotot/salata.jpg" alt="Caesar Salad">
-            <p>Caesar Salad</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/sandwich.jpg" alt="Club Sandwich">
-            <p>Club Sandwich</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/panini.jpg" alt="Caprese Panini">
-            <p>Caprese Panini</p>
-        </div>
-    
-     
-        <div class="food-item">
-            <img src="menuFotot/salmon.jpg" alt="Grilled Salmon">
-            <p>Grilled Salmon</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/carbonara.jpg" alt="Pasta Carbonara">
-            <p>Pasta Carbonara</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/steak.jpg" alt="Steak with Vegetables">
-            <p>Steak with Vegetables</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/pizza.jpg" alt="Four Season Pizza">
-            <p>Four Season Pizza</p>
-        </div>
-        <div class="food-item">
-            <img src="menuFotot/lasagna.jpg" alt="Lasagna">
-            <p>Lasagna</p>
-        </div>
+        <?php
+        
+        foreach ($menuItems as $menuItem) {
+            echo '<div class="food-item">';
+            echo '<img src="menuFotot/' . basename($menuItem->getImagePath()) . '" alt="' . $menuItem->getName() . '">';
+            echo '<p>' . $menuItem->getName() . '</p>';
+            echo '</div>';
+        }
+        ?>
     </div>
 
+    <script>
+       
+        function showCategory(category) {
+            
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('food-menu').innerHTML = xhr.responseText;
+                }
+            };
+
+            var url = 'get_filtered_items.php?category=' + category;
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+    </script>
+
+    
+
+</div>
    
-</div>
-
-
-</div>
-    <script src="app.js"></script>
 </body>
 </html>

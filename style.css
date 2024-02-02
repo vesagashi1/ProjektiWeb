@@ -1,3 +1,5 @@
+ 
+ 
  @import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Cormorant:wght@700&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
@@ -26,6 +28,10 @@ html {
 header{
     background-color: rgb(0, 0, 0);
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+ 
    
     } 
 
@@ -33,6 +39,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+ 
 }
 
 .emri{
@@ -371,6 +378,7 @@ position: absolute;
     align-items: center;
 }
 
+
 .services::before {
     content: "";
     background-image: url(https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg);
@@ -515,7 +523,7 @@ position: absolute;
 }
 
 .contact {
-    width: 100%;
+    width: 100vw;
    height: 100vh;
     display: flex;
     flex-direction: column;
@@ -529,7 +537,8 @@ position: absolute;
 .cc {
     color: black;
     font-size: 24px; 
-    margin-bottom: 15px; 
+ position: relative;
+ top: 55px;
     font-weight: bold;
 }
 
@@ -544,14 +553,15 @@ position: absolute;
     gap: 15px; 
     padding: 15px; 
     border-radius: 10px;
-  
+    position: relative;
+    top: 25px ;
     margin-bottom: 15px; 
 }
 
 .r1 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 12px; 
+    margin-bottom: 3px; 
 }
 
 .r1 label {
@@ -565,7 +575,7 @@ position: absolute;
 .r1 input,
 .r1 textarea {
     width:300px;
-    padding: 8px; 
+    padding: 6px; 
     background-color: #f9f9f9;
     color: #333;
     box-sizing: border-box;
@@ -597,13 +607,23 @@ position: absolute;
     border-color: #555;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
 footer {
     background-color: #333;
     color: white;
     padding: 8px; 
     text-align: center;
    position: relative;
-   bottom: -12px;
+   bottom: -40px;
      width: 100%; 
  
   
@@ -613,3 +633,193 @@ footer {
     margin: 0;
     font-size: 12px; 
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    
+    html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .headeri {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .emri {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .linqet {
+        margin: 5px 0;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    .fotot {
+        height: 50vh;
+    }
+
+    .textOnTop {
+        font-size: 24px;
+    }
+
+    .arrow,
+    .arrow1 {
+        top: 27%;
+    }
+
+    .arrow {
+        left: 94%;
+        width: 60px; 
+        height: 80px
+    }
+
+    .arrow1 {
+        left: 10%;
+        height: 80px
+    }
+
+    .arrow-top:after,
+    .arrow-bottom:after,
+    .arrow-top1:after,
+    .arrow-bottom1:after {
+        transition-delay: 0s !important;
+    }
+
+
+    .second,
+    .services,
+    .contact {
+        height: auto;
+    }
+
+    .welcome {
+        font-size: 32px;
+    }
+
+    .line {
+        top: 165px;
+        height: 3px;
+    }
+
+    .grid-container,
+    .grid-container2 {
+        grid-template-columns: 1fr;
+    }
+
+    .p1,
+    .p2 {
+        width: 90%;
+    }
+
+    .p2 {
+        padding: 15px;
+    }
+
+    .vitet,
+    .food {
+        font-size: 18px;
+    }
+
+    .sig {
+        width: 70px;
+        height: 70px;
+        bottom: 20px;
+        position: relative;
+    }
+
+
+   .services::before{
+    opacity: 0.1;
+    text-align: center;
+   }
+    .services {
+        align-items: center; 
+    }
+
+    .sev,
+    .line2,
+    .grid-container2 {
+        width: 90%; 
+        max-width: 400px; 
+    }
+
+    .sev {
+        top: 90px; 
+        font-size: 32px; 
+        text-align: center;
+    }
+
+    .line2 {
+        top: 105px; 
+    }
+
+    .grid-container2 {
+        grid-template-columns: 1fr; /* Set a single column layout */
+        gap: 10px; /* Adjust the gap between items */
+    }
+
+    .p2 {
+        width: 100%; /* Make each item take full width */
+        padding: 15px;
+        text-align: center; /* Center text */
+    }
+
+    .p2:hover {
+        background-color: rgb(26, 5, 2);
+        cursor: pointer;
+        border: 3px solid white;
+        transition: 0.5s ease-out;
+        text-align: center; /* Center text */
+    }
+
+    .food,
+    .tex,
+    .menu {
+        font-size: 16px; 
+    }
+    .cc {
+        font-size: 18px;
+       position: relative;
+       top: 10px;
+    }
+
+    .us {
+        width: 90%;
+        top: 20px;
+    }
+
+    .r1 input,
+    .r1 textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .sub {
+        font-size: 16px;
+    }
+
+    .find {
+        font-size: 24px;
+    }
+
+    .mapi {
+        height: 300px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+   
+    }

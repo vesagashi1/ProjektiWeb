@@ -23,10 +23,15 @@ html {
    
 
 
-header{
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
-} 
+    header{
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        /* position: fixed;
+        width: 100%;
+        z-index: 1000; */
+     
+       
+        } 
 
 .headeri{
     display: flex;
@@ -131,3 +136,43 @@ nav button:hover{
     margin-bottom: 10px;
 }
 
+
+
+
+@media only screen and (max-width: 1284px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .headeri {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* position: fixed;
+        z-index: 1000; */
+    }
+
+    .emri {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .linqet {
+        margin: 5px 0;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+   
+
+    .nav{
+        position: relative;
+        top: 30px;
+    }
+}

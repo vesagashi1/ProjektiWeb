@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +19,10 @@
         <a class="linqet" href="menu.php">Menu</a>
         <a class="linqet scroll-link" href="#contact-section">Contact Us</a>
         <a class="linqet" href="register.php">Register</a>
-    </div>
+      </div>
     </div>
 </header>
-
+<div class="wrapper">
     <main>
         <div class="fotot">
         <img class="fotoNje visible" src="fotot/foto1.jpg" alt="photo 1">
@@ -83,9 +85,10 @@
          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <div class="contact" id="contact-section">
-        <p class="cc">CONTACT US</p>
+    <div class="contact" id="contact-section" >
+        <p class="cc">CONTACT US FOR RESERVATIONS</p>
         <div class="us">
+            <form action="contact.php" method="post">
             <div class="r1 fillim"><label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required></div>
             <div class="r1 fund"><label for="surname">Surname:</label>
@@ -94,10 +97,13 @@
                 <input type="tel" id="tel" name="tel" placeholder="Enter your phone number" required></div>
             <div class="r1 fund"><label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required></div>
+            <div class="r1 fund"><label for="date">Date:</label>
+                <input type="date" id="date" name="date" placeholder="Enter your date:" required></div>
+            
             <div class="r1 fillim"><label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Write your message here" required></textarea></div>
             <div class="r1 fund"><button onclick="checkAll()" class="sub">SUBMIT</button></div>
-            
+            </form>
             
         </div>
             <footer>
@@ -105,6 +111,10 @@
             </footer>
       
     </div>
+    </div>
+
+ 
+
 
 
  

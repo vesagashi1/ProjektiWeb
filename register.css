@@ -43,7 +43,10 @@ body {
 header{
     background-color: rgb(0, 0, 0);
     padding: 10px;
-} 
+  
+ 
+   
+    } 
 
 .headeri{
     display: flex;
@@ -98,6 +101,7 @@ form {
 
         .forms{
             display: flex;
+        
           justify-content: center;
         align-items: center;
         }
@@ -161,6 +165,48 @@ h2{
     
         color: red;
         margin-top: 5px;
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+        form {
+            width: 80%; 
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+        
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .headeri {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .emri {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    
+        .linqet {
+            margin: 5px 0;
+            font-size: 16px;
+            margin-right: 4px;
+        }
+
+        input {
+            margin-top: 8px; 
+        }
+        
+    
     }
 
 

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Cormorant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: inherit;
+    overflow-x: inherit;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.headeri {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emri {
+    font-family: 'Arsenal', sans-serif;
+    color: white;
+}
+
+.linqet {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.linqet:hover {
+    text-decoration: none;
+    color: lightgray;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arsenal', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+.first, .second {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.forms-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.form-conatiner2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.us, h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.p1 {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.8;
+    z-index: 2;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.p1 label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.p1 input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.p1 button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.p1 button:hover {
+    background-color: #555;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 8px; 
+    text-align: center;
+   position: relative;
+  
+     width: 100%; 
+ 
+  
+}
+
+.rights {
+    margin: 0;
+    font-size: 12px; 
+}
+
+.reservation-section {
+    margin-top: 50px;
+}
+
+.reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.reservations-table th, .reservations-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.reservations-table th {
+    background-color: #f2f2f2;
+}
+
+
+#userTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#userTable th,
+#userTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#userTable th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    
+    html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .headeri {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .emri {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .linqet {
+        margin: 5px 0;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    .first, .second {
+        padding: 10px;
+    }
+
+    .forms-container, .form-conatiner2 {
+        grid-template-columns: 1fr;
+    }
+
+    .p1 input, .p1 button {
+        width: 100%;
+    }
+    td {
+        font-size: 12px; 
+    }
+
+    .forms {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reservations-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .reservations-table thead,
+    .reservations-table tbody,
+    .reservations-table tr {
+        display: block;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .reservations-table th,
+    .reservations-table td {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 8px; 
+        text-align: center;
+    }
+}
